@@ -1,0 +1,11 @@
+configure terminal
+int s0/0
+no shut
+ip address 192.168.60.30 255.255.255.0
+end
+configure terminal
+int s0/1
+no shut
+ip address 192.168.70.30 255.255.255.0
+end
+copy run start

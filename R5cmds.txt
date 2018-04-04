@@ -1,0 +1,16 @@
+configure terminal
+enable secret cisco
+service password-encryption
+line vty 0 4
+password cisco
+login
+end
+config terminal
+hostname R5
+end
+config terminal
+int fa0/1
+no shutdown
+ip address 192.168.1.105 255.255.255.0
+end
+copy run start

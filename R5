@@ -1,0 +1,38 @@
+ 
+R5#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+R5(config)#
+R5(config)#enable secret cisco
+R5(config)#
+R5(config)#service password-encryption
+R5(config)#
+R5(config)#line vty 0 4
+R5(config-line)#
+R5(config-line)#password cisco
+R5(config-line)#
+R5(config-line)#login
+R5(config-line)#
+R5(config-line)#end
+R5#
+R5#config terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+R5(config)#
+R5(config)#hostname R5
+R5(config)#
+R5(config)#end
+R5#
+R5#config terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+R5(config)#
+R5(config)#int fa0/1
+R5(config-if)#
+R5(config-if)#no shutdown
+R5(config-if)#
+R5(config-if)#ip address 192.168.1.105 255.255.255.0
+R5(config-if)#
+R5(config-if)#end
+R5#
+R5#copy run start
+Destination filename [startup-config]? show ip int brief
+%Error copying nvram:show (Invalid argument)
+R5#

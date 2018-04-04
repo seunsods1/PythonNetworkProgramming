@@ -1,0 +1,16 @@
+ 
+R4#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+R4(config)#
+R4(config)#int s0/1
+R4(config-if)#
+R4(config-if)#no shut
+R4(config-if)#
+R4(config-if)#ip address 192.168.70.40 255.255.255.0
+R4(config-if)#
+R4(config-if)#end
+R4#
+R4#copy run start
+Destination filename [startup-config]? show ip int brief
+%Error copying nvram:show (Invalid argument)
+R4#
